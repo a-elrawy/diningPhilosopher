@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.os.diningphilosopher.ProcessView">
+  <tabs>
+    <Tab text="Processes">
+      <content>
+            <AnchorPane>
+               <children>
+              <AnchorPane layoutX="78.0" layoutY="46.0" minHeight="0.0" minWidth="0.0" prefHeight="604.0" prefWidth="1081.0">
+                     <children>
+                        <TableView fx:id="table" layoutX="97.0" layoutY="88.0" prefHeight="474.0" prefWidth="930.0" style="-fx-background-color: darkgrey;">
+                          <columns>
+                            <TableColumn fx:id="name" prefWidth="200.0" text="Process Name" />
+                            <TableColumn fx:id="cpu1" prefWidth="200.0" text="CPU 1 Allocated" />
+                              <TableColumn fx:id="cpu2" prefWidth="200.0" text="CPU 2 Allocated" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Assign">
+      <content>
+            <AnchorPane>
+               <children>
+              <AnchorPane layoutX="81.0" layoutY="70.0" minHeight="0.0" minWidth="0.0" prefHeight="564.0" prefWidth="1118.0">
+                     <children>
+                        <Button layoutX="479.0" layoutY="415.0" mnemonicParsing="false" onAction="#assign" prefHeight="57.0" prefWidth="155.0" text="Assign" />
+                        <TextField fx:id="input_name" layoutX="439.0" layoutY="81.0" prefHeight="43.0" prefWidth="241.0" promptText="eg. p1">
+                           <font>
+                              <Font name="System Italic" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="439.0" layoutY="36.0" prefHeight="45.0" prefWidth="232.0" text="Process Name">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="440.0" layoutY="159.0" prefHeight="45.0" prefWidth="232.0" text="Cpu 1">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="440.0" layoutY="271.0" prefHeight="45.0" prefWidth="232.0" text="Cpu 2">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="input_cpu1" layoutX="439.0" layoutY="212.0" prefHeight="33.0" prefWidth="260.0" />
+                        <ChoiceBox fx:id="input_cpu2" layoutX="439.0" layoutY="328.0" prefHeight="33.0" prefWidth="260.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
